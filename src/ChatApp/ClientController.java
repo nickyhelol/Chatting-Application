@@ -8,6 +8,7 @@ package ChatApp;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.net.Socket;
 import javax.swing.JFrame;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
@@ -25,7 +26,8 @@ public class ClientController extends JFrame {
 
     public ClientController() {
         view = new ClientView();
-        model = new MultiThreadClient(view);
+        int clientNo = ChatServer.i;
+        model = new MultiThreadClient(view, clientNo);
         broadcast = new BroadcastMessage();
         messageTo = new MessageTo();
         disconnectMessage = new DisconnectMessage();
@@ -39,6 +41,8 @@ public class ClientController extends JFrame {
                 eventHandleWindowClosed();
             }
         });
+        
+        
 
         getContentPane().add(model.getView());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -50,6 +54,7 @@ public class ClientController extends JFrame {
     public static void main(String[] args) {
         ClientController JFrame = new ClientController();
         JFrame.setVisible(true);
+          
     }
 
     private void sendBtnEventHandler() {

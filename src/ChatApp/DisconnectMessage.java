@@ -5,6 +5,8 @@
  */
 package ChatApp;
 
+import java.net.Socket;
+
 /**
  *
  * @author nicky
@@ -12,6 +14,6 @@ package ChatApp;
 public class DisconnectMessage implements Message{
     public void sendMessage(MultiThreadClient c)
     {
-        c.getPw().println("All/A client has disconnected.");
+        c.getPw().println("All/client "+c.getClientNo()+" has disconnected.");
     }
 }

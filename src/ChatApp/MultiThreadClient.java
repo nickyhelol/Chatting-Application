@@ -16,6 +16,7 @@ import java.util.logging.Logger;
  */
 public class MultiThreadClient implements Runnable {
 
+    private int clientNo;
     int portNumber = 8888;
     String host = "localhost";
     private String msgReceived = null;
@@ -25,8 +26,9 @@ public class MultiThreadClient implements Runnable {
     private boolean closed = false;
     private ClientView view;
 
-    public MultiThreadClient(ClientView view) {
+    public MultiThreadClient(ClientView view, int clientNo) {
         this.view = view;
+        this.clientNo = clientNo;
         new Thread(this).start();
     }
 
@@ -121,5 +123,9 @@ public class MultiThreadClient implements Runnable {
 
     public ClientView getView() {
         return view;
+    }
+    
+    public int getClientNo() {
+        return clientNo;
     }
 }

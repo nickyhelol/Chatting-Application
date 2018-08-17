@@ -23,8 +23,8 @@ public class ChatServer {
 
     public static final int PORT = 8888;
     public boolean stopRequested;
-    static HashMap<Integer, Socket> hm = new HashMap<>();
-    static int i = 1;
+    public static HashMap<Integer, Socket> hm = new HashMap<>();
+    public static int i = 1;
 
     public ChatServer() {
         stopRequested = false;
@@ -63,9 +63,8 @@ public class ChatServer {
                     Socket toSocket = s;
                     PrintWriter pw = new PrintWriter(toSocket.getOutputStream(), true);
                     pw.println("Client " + i + " has connected to the room.");
-                    pw.flush();
                 }
-                i++;
+                ++i;
             } catch (SocketTimeoutException e) {  
             } catch (IOException e) {
                 System.err.println("Can't accept client connection: " + e);

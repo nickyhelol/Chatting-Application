@@ -3,10 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/nicky/Documents/NetBeansProjects/ChatApp/src/ChatApp/MultiThreadServer.java</file>
+            <file>file:/C:/Users/nicky/Documents/NetBeansProjects/ChatApp/src/ChatApp/DisconnectMessage.java</file>
             <file>file:/C:/Users/nicky/Documents/NetBeansProjects/ChatApp/src/ChatApp/ClientController.java</file>
+            <file>file:/C:/Users/nicky/Documents/NetBeansProjects/ChatApp/src/ChatApp/BroadcastMessage.java</file>
             <file>file:/C:/Users/nicky/Documents/NetBeansProjects/ChatApp/src/ChatApp/MultiThreadClient.java</file>
             <file>file:/C:/Users/nicky/Documents/NetBeansProjects/ChatApp/src/ChatApp/ClientView.java</file>
+            <file>file:/C:/Users/nicky/Documents/NetBeansProjects/ChatApp/src/ChatApp/MessageTo.java</file>
+            <file>file:/C:/Users/nicky/Documents/NetBeansProjects/ChatApp/src/ChatApp/Message.java</file>
+            <file>file:/C:/Users/nicky/Documents/NetBeansProjects/ChatApp/src/ChatApp/ChatServer.java</file>
         </group>
     </open-files>
 </project-private>
